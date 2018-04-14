@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*
+Esto es un comentario 
+*/
+
+/*
+	Sintaxis de una regla CSS
+
+
+	selector {
+		nombre-pripiedad: valor;
+		nombre-propiedad: valor;
+		...
+	}
+
+	p.ej. Para establecer el color rojo en las etiquetas
+	de párrafo sería de la siguiente manera:
+
+	p¨{
+	color: #f00;
+}
+
+*/
+.container {
+	max-width:1200px;
+	/* 
+		Para centrar un elemento de bloque, tenemos que establecer un márgen
+		automático a la izquierda y también a la derecha.
+		
+	*/	
+
+		margin: 0 auto; 
+	
+}
