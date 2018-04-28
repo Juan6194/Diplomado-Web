@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 Esto es un comentario 
 */
@@ -21,15 +20,219 @@ Esto es un comentario
 	color: #f00;
 }
 
+	Selectores vacios:
+	1. Por etiqueta: Se escribe únicamente el nombre de la etiqueta-
+	p{
+	font-family: arial;
+	font-size: 14px;
+	color:f#00;
+	}
+
+	2. Por clase: Se escribe "." seguido del valor del atributo "class"
+		(Recomendado porque se pueden reutilizar)
+		.container{
+			max-width: 1200px;
+			margin:0;
+		}
+	3. Por id: Se escribe "#" seguido del valor del atributo "id".
+		(No recomendado porque no se puedne reutilizar las reglas CSS)
+	#linkGoogle {
+		color: #ff0;
+		text-decoration: none;
+		}
+
+		Selectores descendientes: Se utilizan cuando necesitamos estilizar o diseñar algún 
+			elemento que se encuentra dentor de otro. 
+			
+		main section p a {
+			color: #f00
+		}
+		.contact ul li a ´{
+		text-decoration:none;
+
+		CSS (hojas de estilo en cascada): 
+			Modelo de Cajas ( Model Box): Se refiere a que CSS considera a todos los 
+			los elementos html como "Cajas".
+			Las propiedades del modelo de cajas se pueden aplicar a culalquier elemento HTNL
+			( propiedades determinadas de HTML) y estas  no se heredan. 
+			
+			-width: Ancho (valor numerico)
+				widht: 300px;
+
+			-hight: Alto (valor numerico)
+				height: 300px;
+
+			-border: Borde ( Recibe tres valores: border-width border-style border-style border-color)
+				
+				(4 lados)
+				border: 1px solid #ccc;
+
+				border-width: 1px
+				border-style: solid;
+				border-color: #ccc
+
+				(1 lado)
+				lado= top, right, bottom, left
+				border-left: 1px solid #ccc;
+				border-right:
+				border-top:
+				border-bottom:
+
+				border-left-width: 1px;
+				border-left-style: solid;
+				border-left-color: #ccc;
+
+			-background: Fondo (background-color background-image background-repeat cackground-position background-attachment )
+				background: #f00 url("../images/img1.jpg")no repet center center fixed;
+				
+				background-color: #f00; ( default: transparente)
+				background-image: url("../images/imgl.jpg")
+				background-repeat: Dos posibles valores (repeat \ no repeat) (Default: repeat)
+				background-position: posX posY (default: left top)
+						posX= left, center, right, [number] 300px
+						posY= top, center, bottom, [ number] 300px
+				background-attachment: scroll | fixed (default:scroll)
+
+
+				background-color: #f00
+				background-image: url("../images/imgl.jpg")
+				background-repeat: no repeat
+				background-position:
+				background-attachment: fixed 
+
+			-margin:
+				marging:  10px; 
+					1 valor aplica a los 4 lados
+
+				margin: 10px 20px 
+					2 valores:	
+						1er valor top/bottom
+						2do valor left/right
+
+				marging: 10px 20px 30px 
+					3 valores:
+						1er valor top
+						2do valor left/right
+						3er valor bottom
+
+				marging: 10px 20px 30px 40 px
+					4 valores: (empezando con top y en setido a laas manecillas del reloj)
+						1er valor top
+						2do valor right
+						3er valor bottom
+						4to valor left
+
+
+				marging-left: 10px;
+				marging-right: 10px;
+				marging-top: 100px;
+				marging-bottom: 200 px;
+
+				marging: 100px 10px 200px 
+
+			-padding: Igual que margin
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 100px;
+				padding-bottom: 200 px;
+
+				padding: 100px 10px 200px
+
+				Elementos de Bloque Vs Elementos de Línea
+
+}
 */
 .container {
-	max-width:1200px;
+	max-width: 1200px;
 	/* 
 		Para centrar un elemento de bloque, tenemos que establecer un márgen
 		automático a la izquierda y también a la derecha.
 		
 	*/	
 
-		margin: 0 auto; 
+	margin: 0 auto;
+}
+.page-header {
+	padding: 25px 25px 250px; /* arriba, izq derecha, abajo*/
+	background: url("../images/header.jpg")no-repeat center center;
+}
+.page-header h1 {
+	margin: 0;
+	color: #Fff;
+	font-family: arial;
+	fonrt-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px #666; /* (PosX posY blur color)*/
+}
+.page-nav {
+	background-color: #E39108;
+
+}
+.page-nav ul {
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+}
+.page-nav li {
+	display: inline-block/* Quita bullets */
+}
+.page-nav a{
+	display: block;
+	background-color: #E39108;
+	padding: 10px 20px;
+	font-family: arial;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+.page-nav a:hover {
+	background-color:#8C560A;
+	color:#fff;
+}
+.page-main{
+		padding: 65px 0;
+		font-family: arial;
+		font-size: 15px;
+		line-height: 1.8; /* (default 1.2) */
+}
+.page-main h2 {
+		font-size: 28px;
+		font-weight: normal;
+		text-transform: uppercase;
+		color:black
+}
+.page-main img{
+		max-width: 300px;
+		border: 8px solid #fff;
+		box-shadow: 0 0 10px #999; /* posX posY blur color) */
+}
+.page-footer {
+	background-color:#E39108;
+	padding: 20px 0;
+	text-align:center;
+
+}
+.page-footer p{
+	margin:0;
+	font-family: arial;
+	font-size: 14px;
+	color:#FFF;
 	
+}
+.actions{
+	text-align:center;
+}
+.actions .go-top{
+	display:inline-block;
+	background: #555;
+	color:#fff;
+	text-decoration: none;
+	padding: 10px 20px;
+
+}
+.actions .go-top:hover {
+	background-color: #444;
+	color: #fff;
 }
