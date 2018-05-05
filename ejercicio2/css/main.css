@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 /* Fonts */
+@import url("lib/fontawesome-all.css");
+@import url("lib/font-juan.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
 
 /* General */
@@ -15,6 +17,7 @@ body{
 }
 img {
     max-width: 100%;
+    display:block;
 }
 ul, ol{
     margin: 0;
@@ -38,11 +41,111 @@ ul, ol{
 }
 
 /* Nav */
-.page-nav li{
-    display: inline-block
+.page-nav {
+   background-color: #6666;
+  
+}
+/* .page-nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+El código de arriba es para cuando paces el cursor cerca de la 
+palabra cambie el color*/
+
+.page-nav  li{
+     float:left;
+}
+.page-nav a {
+    display: block;
+    color:rgb(250, 248, 248);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all .3s;
+
+    /* Padding: distancia entre un elemento limitador
+    y el contenido (arriba abajo)px (izquierda, derecha)px 
+    */
+    
+    /* 
+    transition: recibe una lista de propiedades a transicionar-
+        cada propiedad de la lista debe tener especificado el
+        tiempo de transisión, el cual puede ser en segundos  (s) o
+        milisegundos (ms) Siempre usar la misma medida no combinar
+        
+        sintaxis:
+        transition:[propiedad tiempo], ...;
+        transition: background-color 30ms;
+        transition: background-color 30ms;
+        transition: background-color .3s,color .5s; 
+        transition: all .3s;
+        */
+}
+.page-nav a:hover {
+    background-color:rgba(36, 35, 35, 0.4);
+    color:#fff;
+    /* Para que se mueva el texto de gradnde a chico 
+    font-size: 20px; */
+}
+
+
+.page-nav .fa-search {
+    color:rgb(255, 255, 255);
+   float: right;
+   margin: 10px 20px 0;
+    cursor: pointer;
+
 }
 /* Main */
 
+.page-main{
+    padding: 65px 0;
+
+}
+
+.page-main h2:first-child {
+    margin-top:0;
+}
+
+/* Grid */
+.grid .col-left{
+    float:left;
+    width: 33.33%;
+
+}
+.grid .col-right{
+    padding-left: 16px;
+    float:right;
+    width: 66.66%;
+    box-sizing: border-box; 
+    /* 
+    bos-sizing: valor por defecto "content-box"
+        content-boz: Ancho del contenido es únicamente el contenido, es decir que
+        los valores de "margin" "paddind" y "border" se sumarán.
+
+    birder-box: Ancho del contenido es la suma del "contenido" + "padding" + "border",
+    es decir que los alores de "padding" y "border" se toma del ancho establecido.
+    */
+}
 /* Footer */
+.page-footer{
+    background-color: rgb(209, 206, 206);
+    padding: 16px 0;
+}
+.page-footer p{
+    margin:0;
+    text-align: center;
+    color: #fffbfb
+}
 
 /* Helpers */
+.clearfix:before,
+.clearfix:after{
+    content:"";
+    display: block;
+
+}
+.clearfix:after{
+    clear: both; /* Puede ser [both | left | right] */
+}
+
