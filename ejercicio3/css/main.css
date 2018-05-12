@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url("lib/fontawesome-all.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* General */
+@import url("lib/normalize.css");
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    box-shadow: 0 0 20px #666; /* Sombra a todo el contenedor*/
+    max-width:  1200px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display:block;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+/* Header */
+.page-header{
+    position: relative;
+
+}
+.page-header h1{
+    color: white;
+    position: absolute;
+    top: 20px;
+    left:900px;
+    margin: 0px;
+    line-height: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    text-transform: uppercase
+}
+
+/* Content */
+.page-content{
+    background-color: black;
+}
+/* Nav */
+.page-nav{
+    background-color: black;
+    float: left;
+    width: 20%;
+}
+.page-nav a{
+    display: block;
+    padding: 15px 20px;
+    color: aliceblue;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.page-nav a:hover,
+.page-nav a.active {
+    background-color: #666;
+    color: #fff;
+
+}
+
+/* Main */
+.page-main{
+    float: right;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 2, 2);
+    padding: 0 16px 65px; /* No quede pegado a la bara de navegación*/
+    box-sizing: border-box;/*Para que no se pase de la medida y baje la caja */
+}
+.page-main h2{
+    color: #666;
+    font-size: 25px;
+    font-weight:400;
+    text-transform: uppercase;
+}
+
+.page-main p{
+    color: #444;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.page-main img{
+    max-width: 350px;
+    float: left;
+    margin: 0 16px 16px 0;
+}
+/* Footer */
+.page-footer {
+    background-color: black;
+    padding: 20px 0;
+}
+.page-footer p{
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display: block;
+}
+.clearfix:after{
+    clear: both;
+}
