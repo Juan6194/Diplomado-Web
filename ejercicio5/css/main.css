@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url("lib/fontawesome-all.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* General */
+@import url("lib/normalize.css");
+@import url("lib/grid.css");
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width:  1200px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display:block;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+/* Header */
+.page-header{
+    position: relative;
+}
+.page-header h1{
+    position: absolute;
+    top:25px;
+    left:25px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 30px;
+    text-shadow: 0 0 8px #6666
+
+}
+
+/* Nav */
+.page-nav {
+    background-color: rgba(121, 2, 2, 0.637);
+   
+ }
+ .page-nav li{
+     display:inline-block;
+
+ }
+ .page-nav a {
+     display: block;
+     color:rgb(250, 248, 248);
+     text-decoration: none;
+     padding: 10px 20px;
+     transition: all .3s;
+ 
+ }
+ .page-nav a:hover {
+     background-color:rgba(36, 35, 35, 0.4);
+     color:#fff;
+     
+ }
+ .page-nav a.active{
+     border-bottom-color: #fff;
+ }
+
+/* Main */
+.page-main{
+    padding: 65px;
+
+}
+.page-main h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: rgba(32, 32, 32, 0.4);
+}
+.page-main h2:first-child{
+    margin-top: 0;
+
+}
+
+/* Form*/
+.form {
+    padding: 50px;
+    border: 1px solid #ccc;
+}
+.form__label{
+    display: block;
+    margin-bottom: 4px;
+    color:#333;
+}
+.form__element{
+    margin-bottom: 25px;
+}
+.form__element{
+    margin-bottom: 25px;
+}
+.form__text{
+    width:100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    box-sizing: border-box; /* no sume y se pase del anco que es*/
+    outline: none;
+    border:1px solid #ccc;
+}
+.form__text:focus{
+    border-color: rgba(121, 2, 2, 0.637);
+    box-shadow: 0 0 5px  rgba(121, 2, 2, 0.637);
+}
+.form__select{
+    height: 40px;
+    background-color: #fff;
+}
+.form__textarea{
+    resize: vertical;
+}
+.form__actions{
+    text-align: right;
+}
+.form__button{
+    border: none;
+    background-color: #666;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color:#fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+.form__button:hover{
+    background-color: #555;
+    color: #fff;
+}
+.form__button--main{
+    background-color:  rgba(121, 2, 2, 0.637);
+    color: #fff;
+}
+.form__button--main:hover{
+    background-color:  rgba(90, 2, 2, 0.637);
+}
+.form_text
+/*
+.form input [type=text],
+.form input [type=email],
+.form input [type=tel],
+.form input [type=number],
+select,
+textarea{
+    width: 100%;
+}
+*/
+
+
+/* NOTA: form+tab= ¡¡Formulario siempre!!*/
+
+/* Footer */
+.page-footer{
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.page-footer p{
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display: block;
+}
+.clearfix:after{
+    clear: both;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> A R T S T U D I O</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>A R T S T U D I O</h1>
+            <img src="../ejercicio5/images/ej1.jpg" alt="">
+            <nav class="page-nav">
+
+                <ul class="clearfix">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="servicios.html">
+                            Servicios</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">
+                            Productos</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" class="active">
+                            Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        </nav>
+        <main class="page-main">
+            <section class="page-section">
+                <div class="grid">
+                    <div class="col col-tb-4">
+                        <h2>Contáctanos</h2>
+                    </div>
+                    <div class="col col-tb-8">
+                        <form action="#" method="POST" class="form">
+                            <!--
+                             Elementos de formulario:
+                             -input:(campo de entrada de datos de tipo texto de una línea)
+                                 - text(campo de entrada de datos de tipo texto de una línea,los caracteres se reemplazan or asteriscos o bullets)
+                                 - password
+                                 - radio( radio botones de una opción)
+                                 - checkbox( casillas de verificación)
+                                 - file
+                                 - submit (Botón de envío de datos de formulario)
+                                 - reset (Botón de regresar al estado inicial del formulario)
+                                 - number (campo de entrada de datos de tipo texto de una línea,solo se permitirá valores numéricos)
+                                 - tel (Tipo de texto en línea)
+                                 - email(Tipo de texto en línea)
+                                 - url(Tipo de texto en línea)
+                                 - label: Para definir una etiqueta desciptiva a un elemento de formulario en especifico
+                                 - select: Listado (dropdown) de una sola seleccion. Etiqueta de tipo option
+                                    -option: Es una opción seleccionable de "select".
+                                - textarea: Campo de entrada de texto multilínea.
+
+                                form tiene dos métdos para enviar datos al servidor:
+                                      -GET: (Valor por defecto) los parámetros se envian por la URL (Pocos datos)
+                                      -POST: Los parámetros se envían en un segundo plano. (No son visibles) (Muchos datos o archivos)
+
+                        -->
+                            <div class="form__element">
+                                <label for="name" class="form__label">Nombre</label>  <!--br-->
+                                <input id="name" type="text" name="name" placeholder="p.ej.Juan"class="form__text">
+                            </div>
+                            <div class="form__element">
+                                <label for="lastName" class="form__label">Apellido</label>
+                                <input id="lastName" type="text" name="lastName" placeholder="p.ej. Pérez" class="form__text">
+                            </div>
+                            <div class="form__element">
+                                <label for="tel" class="form__label">Teléfono</label>
+                                <input id="tel" type="text" name="tel" placeholder="5543322223"class="form__text">
+                            </div>
+                            <div class="form__element">
+
+                                <label for="email" class="form__label">Correo electrónico</label>
+                                <input id="email" type="text" name="email" placeholder="ejemplo@correo.com" class="form__text">
+                            </div>
+                            <div class="form__element">
+                                <span class="form__label">Sexo</span>
+                                <input id="female" type="radio" name="gender" value="Mujer" />
+                                <label for="female">Mujer</label>
+
+                                <input id="male" type="radio" name="gender" value="Hombre"/>
+                                <label for="male">Hombre</label>
+
+                            </div>
+                            <div class="form__element">
+                                <span class="form__label">Pasatiempos</span>
+
+                                <input id="read" type="checkbox" name="read" value="Leer"/>
+                                <label for="read">Leer</label>
+
+                                <input id="play" type="checkbox" name="play" value="Jugar"/>
+                                <label for="play">Jugar</label>
+
+                                <input id="dance" type="checkbox" name="dance" value="Bailar" />
+                                <label for="dance">Bailar</label>
+
+                                <input id="run" type="checkbox" name="run" value="Correr"/>
+                                <label for="run">Correr</label>
+                            </div>
+                            <div class="form__element">
+                                <label for="nationality" class="form__label">Nacionalidad</label>
+                                <select id="nadtionality" name="nationality" class="form__text form__select">
+                                    <option value="">- Selecciona tu nacionalidad-</option>
+                                    <option value="Mexicana">Mexicana</option>
+                                    <option value="Colombiana">Colombiana</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Musulmana">Musulmana</option>
+                                </select>
+                            </div>
+                            <div class="form__element">
+                                <label for="message" class="form__label">Escribe tu mensaje</label>
+                                <textarea id="message" rows="8" maxlength="1200" name="message" placeholder="Máximo 1200 caracteres"class="form__text form__textarea"></textarea>
+                            </div>
+                            <div class="form__actions">
+                                <input type="reset" class="form__button"/>
+                                <input type="submit" class="form__button form__button--main"/>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <p>Todos los derechos reservados | eduMac2018 | Juan Torres</p>
+        </footer>
+    </div>
+    <div id="js">
+        <script src="js/lib/jquery-3.3.1.min.js"></script>
+        <script src="js/plugins/jquery.validate.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+
+</html>
