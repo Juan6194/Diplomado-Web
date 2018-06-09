@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url("lib/fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* General */
+@import url("lib/normalize.css");
+@import url("lib/grid.css");
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Header */
+.page-header {
+	position: relative;
+}
+.page-header h1 {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	margin: 0;
+	font-size: 35px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px #666;
+	color: #ccc;
+}
+
+/* Nav */
+.page-nav {
+	padding: 20px 0;
+}
+.page-nav li {
+	display: inline-block;
+}
+.page-nav li + li {
+	margin-left: 16px;
+}
+.page-nav a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FF8300;
+}
+.page-nav a:hover {
+	text-decoration: underline;
+}
+
+
+/* Main */
+.page-main {
+	padding: 65px 0;
+}
+.page-main h2 {
+	font-size: 30px;
+	font-weight: 400;
+	color: #FF6600;
+}
+.page-main h2:first-child {
+	margin-top: 0;
+}
+.page-main p {
+	line-height: 1.6;
+}
+
+/* Footer */
+.page-footer {
+	padding: 16px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}
+.page-footer p {
+	margin: 0;
+	font-size: 14px;
+	color: #666;
+}
+
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both;
+}
