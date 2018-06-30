@@ -115,27 +115,10 @@
                 <div class="container">
                     <div class="grid">
                         <div class="col col-tb-4">
-                            <h2>Create</h2>
+                            <h2>Teams</h2>
                         </div>
                         <div class="col col-tb-8">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, autem doloribus possimus eveniet
-                                quam fugiat natus unde. Perferendis distinctio iste rerum magni corrupti architecto consequuntur
-                                provident reprehenderit, nulla, atque odit recusandae. Deleniti nisi facere laborum eveniet
-                                eum non amet corporis, architecto aut tempora necessitatibus magnam. Sunt facere et, vero
-                                omnis error quidem excepturi, laudantium odit molestias magnam aliquam recusandae officia
-                                beatae distinctio laboriosam cumque adipisci commodi voluptatum esse sint quisquam totam
-                                quaerat. Aspernatur vero non, sed eveniet perspiciatis vel quia doloribus adipisci laudantium
-                                explicabo hic, maiores corporis omnis reiciendis, expedita molestias laboriosam nobis. Veniam
-                                earum inventore reprehenderit velit cumque distinctio.</p>
-                            <p>Laborum officia eum eligendi voluptatibus. Fugiat, nobis ipsa totam accusamus fugit earum inventore
-                                molestiae ratione esse voluptatum facilis minima illo eum corrupti laboriosam rem dignissimos
-                                nesciunt possimus sit aut unde labore doloremque cupiditate saepe! Ut facere voluptatem dolorum
-                                rerum deleniti distinctio unde laborum qui, ipsum quo libero placeat laudantium eius quisquam
-                                et neque magni. Saepe accusantium, excepturi rerum error distinctio sit officia ab autem
-                                aliquam aut non officiis reprehenderit corrupti iure ipsa, cumque numquam nam possimus ratione
-                                consequatur nemo odit eaque suscipit. Dolores eaque aut ratione voluptatem eos minima omnis
-                                officia! Quis at aliquam quas aut blanditiis tempore officia omnis!</p>
-
+                            <div id="cardContent"> </div>
                         </div>
                     </div>
                 </div>
@@ -233,11 +216,42 @@
         </footer>
     </div>
     <div id="js">
+        <script src="js/lib/handlebars-v4.0.11.js"></script>
         <script src="js/lib/jquery-3.3.1.min.js"></script>
         <script src="js/plugins/jquery.sticky.js"></script>
         <script src="js/plugins/jquery.flexslider-min.js"></script>
         <script src="js/main.js"></script>
     </div>
+    <script id="cardTemplate" type="text/x-handlebars-template">
+            <div id="cardCurrentMatch" class="card-current-match ">
+                    <div class="card-current-match__header">
+                        <h3>Jugando en este momento </h3>
+                        <span>Tiempo transcurrido: <strong >{{time}}</strong></span>
+                    </div>
+                    <div class="card-current-match__content">
+                        <div class="grid">
+                            <div class="col col-tb-6">
+                                <h4>{{home_team.country}}</h4> 
+                                <ul class="card-current-match__list">
+                                    <li>Goles: <strong >{{home_team.goals}}</strong></li>
+                                    <li>Tarjetas amarillas: <strong >{{home_team_statistics.yellow_cards}}</strong></li>
+                                    <li>Tarjetas rojas: <strong >{{home_team_statistics.red_cards}}</strong></li>
+                                    <li>Penales: <strong >{{home_team.penalties}}</strong></li>
+                                </ul>
+                            </div>
+                            <div class="col col-tb-6">
+                                    <h4>{{away_team.country}}</h4> 
+                                    <ul class="card-current-match__list">
+                                        <li>Goles: <strong >{{away_team.goals}}</strong></li>
+                                        <li>Tarjetas amarillas: <strong >{{away_team_statistics.yellow_cards}}</strong></li>
+                                        <li>Tarjetas rojas: <strong >{{away_team_statistics.red_cards}}</strong></li>
+                                        <li>Penales: <strong >{{away_team.penalties}}</strong></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </script>
 </body>
 
 </html>
