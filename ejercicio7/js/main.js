@@ -17,9 +17,14 @@ $(function () {
      cardTemplate = $('#cardTemplate') .html(),
      cardContent =$('#cardContent');
 
+var tabsItems= $('.tabs__item');
+var tabsContents = $('.tabs__content');
+
+
 //Statements
  pageNav.sticky({
 //topSpacion: 25,
+    zIndex: 10,
 
 });
 
@@ -81,4 +86,32 @@ $(function () {
     }
  })
     //.done(setCurrentMatchValues);
+
+// Lightbox config
+lightbox.option({
+    albumLabel:"Esta es la imagen %1 de %2",
+    disableScrolling: true,
+    positionFromTop: 100,
+    fadeDuration: 1200,
+    imageFadeDuration: 5000,
+    wrapAround: true,
+});
+
+//Tabs Component
+tabsItems.on('click', function() {
+    // Se obtiene el número de índece que ocupa el item al que hacemos clic.
+    var indexItem = tabsItems.index(this);
+
+    // Se elimina la clase "active" a todos los items.
+
+    tabsItems.removeClass('active');
+      // Se elimina la clase "active" a todos los contents.
+
+    tabsContents.removeClass('active');
+       // Se añade la clase "active" al Item sobre el que se hace clic.
+
+$(this).addClass('active');
+$ (tabsContents [indexItem]).addClass('active');
+
+});
 });

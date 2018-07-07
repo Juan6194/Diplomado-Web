@@ -223,6 +223,94 @@ figure{
 .btn--secondary:hover{
     background-color: #7204d870;
 }
+
+/* Table*/
+.table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.table caption{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.table thead{
+    background-color: rgb(0, 162, 255);
+    color: #fff;
+}
+.table thead th {
+    font-weight: 400;
+    padding: 15px 10px;
+}
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+/* Gallery */
+.gallery__item {
+    display: inline-block;
+    max-width: 200px;
+    margin-bottom: 3px;
+    overflow: hidden;
+   
+}
+.gallery__item img {
+    transition: all .3s;
+    opacity: .8;
+}
+.gallery__item:hover img{
+    opacity: 1;
+    transform: scale(1.1);
+    
+    /*Puede quedar aquí pero se recomienda arriba con item img porque
+    es el inicio y fin de la transción
+    transition: all .3s;*/
+   
+}
+/* Tabs */
+.tabs__menu {
+    position: relative;
+    top: 1px;
+}
+.tabs__menu:before,
+.tabs__menu:after {
+    content: "";
+    display: block;
+  
+}
+.tabs__menu:after{
+    clear: both;
+
+}
+.tabs__item {
+    float: left;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px 3px 0 0;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+.tabs__item + .tabs__item {
+    margin-left: 1px;
+}
+.tabs__content {
+    display: none;
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius:  0 0 3px 3px;
+}
+.tabs__item.active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+.tabs__content.active { 
+    display: block;
+
+}
+
 /* Helpers */
 .clearfix::before,
 .clearfix:after{
